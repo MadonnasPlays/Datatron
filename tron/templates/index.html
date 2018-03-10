@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Datatron</title>
+
+    <!-- Bootstrap core CSS -->
+    {% load static from staticfiles %}
+    <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    {% load static from staticfiles %}
+    <link href="{% static "vendor/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    {% load static from staticfiles %}
+    <link href="{% static "css/grayscale.css" %}" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Datatron</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#usedatatron">Use Datatron</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-8 mx-auto">
+              <h1 class="brand-heading">DATATRON</h1>
+              <p class="intro-text">Datatron Project
+                <br>Created by pavou and gtax to optimize your life.</p>
+                <hr>
+              <p>Click the button to use Datatron</p>
+              <a href="#usedatatron" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DATATRON MAIN SECTION   DATATRON MAIN SECTION   DATATRON MAIN SECTION   DATATRON MAIN SECTION   DATATRON MAIN SECTION -->
+    <section id="usedatatron" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Use Datatron here</h2>
+          
+          <div class="container">
+            <div class="form-group label-floating has-success">
+            <input align="center" type="text" class="form-control" id="inputField" placeholder="Data" />
+               <span class="form-control-feedback">
+              </span>
+            </div>
+              <button onclick="callBackEnd()" class="btn btn-primary btn-square" id="inputData">
+                Submit
+              </button>
+              <button class="btn btn-warning btn-square" id="Restart">
+                Reset
+          </div>
+        <div id="outputSite">Output</div>
+        <div id="outputDate">Output</div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="about" class="download-section content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>About Datatron</h2>
+            <p>Datatron is an opensource project , created to help you track the websites you are interested in and notify you when something important changed.</p>
+            <p>We are planning on using the blockchain network to expand our datatron capabilities.</p>
+            <p>Datatron calculations are powered by Python.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Contact us</h2>
+            <p>Feel free to contact us on twitter and contribute on github if you have any suggestions or ideas.</p>
+            <ul class="list-inline banner-social-buttons">
+              <li class="list-inline-item">
+                <a href="https://twitter.com/p_vouzaxakis" class="btn btn-default btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">pv Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/Pavou" class="btn btn-default btn-lg">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="network-name">pv Github</span>
+                </a>
+              </li>
+             
+              <li class="list-inline-item">
+                <a href="https://twitter.com/george_txr" class="btn btn-default btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">gt Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/George-Taxiarchou" class="btn btn-default btn-lg">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="network-name">gt Github</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>Copyright &copy; Datatron 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    {% load static from staticfiles %}
+    <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+    {% load static from staticfiles %}
+    <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+
+    <!-- Plugin JavaScript -->
+    {% load static from staticfiles %}
+    <script src="{% static "vendor/jquery-easing/jquery.easing.min.js" %}"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom scripts for this template -->
+    {% load static from staticfiles %}
+    <script src="{% static "js/grayscale.min.js" %}"></script>
+
+
+    </script>
+
+    <script>
+        function callBackEnd(){
+          input_field = document.getElementById("inputField");
+          out_site = document.getElementById("outputSite");
+          out_date = document.getElementById("outputDate");
+
+          console.log(input_field.value)
+           urlToSearch = input_field.value;
+           $.ajax({
+              url: "/checkUrl/",
+              data: { 
+                  "kappa": urlToSearch
+              },
+              cache: false,
+              type: "GET",
+              success: function(response) {
+                //console.log(response)
+                data = JSON.parse(response);
+                out_site.innerHTML = "Site " + data.url;
+                if(data.date != "Never"){
+                  out_date.innerHTML = "Last change " + new Date(data.date);
+                }else{
+                  out_date.innerHTML = "Last change " + data.date;
+                }
+              },
+              error: function(xhr) {
+                console.log(xhr)
+              }
+          });
+        }
+    </script>
+
+  </body>
+
+</html>
